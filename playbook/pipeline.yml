@@ -1,0 +1,12 @@
+---
+
+- hosts: localhost
+  connection: local
+  become_flags: -i
+  gather_facts: yes
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  roles:
+    - role: supervisor-programs
+      type: veolia_service
+      env: stg
