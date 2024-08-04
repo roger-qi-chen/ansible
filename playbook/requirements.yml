@@ -3,3 +3,4 @@
     src: git@bitbucket.org:minergroup/supervisor-programs.git
     scm: git
     version: master
+...

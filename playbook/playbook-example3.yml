@@ -1,0 +1,14 @@
+
+# Use {{ var name }} to use var in Playbook 
+---
+-  name: test play vars
+   hosts: all
+   vars:
+     user: roger
+     home: /home/roger
+   tasks:
+    - name: create the user {{ user }}
+      user:
+        name: "{{ user }}"
+        home: "{{ home }}"
+...

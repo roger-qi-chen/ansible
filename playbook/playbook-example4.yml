@@ -1,0 +1,10 @@
+# Facts
+---
+-  name: a playbook example
+   hosts: all
+   remote_user:
+   tasks:
+    - name: print facts variable
+      debug:
+        msg: "The default IPV4 address is {{ ansible_default_ipv4.address }}"
+...
