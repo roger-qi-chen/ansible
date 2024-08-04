@@ -1,0 +1,12 @@
+# Close Facts gathering
+---
+-  name: install a package and print the result
+   hosts: web
+   gather_facts: no
+   remote_user: ubuntu
+   tasks:
+    - name: install nginx package
+      apt: name=nginx state=present
+    - name: print result
+      debug: var=install_result
+...

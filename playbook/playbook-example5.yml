@@ -1,15 +1,10 @@
-# Print Facts variables
+# Facts
 ---
--  name: print facts variables
+-  name: a playbook example
    hosts: all
-   remote_user: ubuntu
+   remote_user:
    tasks:
-    - name: install nginx package
-      yum: name=nginx state=present
-    - name: copy nginx.conf to remote server
-      copy: src=nginx.conf dest=/etc/nginx/nginx.conf
-    - name: start nginx server
-      service:
-        name: nginx
-        state: started
+    - name: print facts variable
+      debug:
+        msg: "The default IPV4 address is {{ ansible_default_ipv4.address }}" # ansible_processor
 ...
